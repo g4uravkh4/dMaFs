@@ -1,17 +1,25 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
 import Contact from "../pages/Contact";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import Services from "../pages/Services";
+import Doc from "../pages/Doc";
+import DocDetails from "../pages/DocDetails";
 
 const Routers = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/Home" element={<Home />} />
-        <Route path="/Contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Signup />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/doctors" element={<Doc />} />
+      <Route path="/doctors/:id" element={<DocDetails />} />
+    </Routes>
   );
 };
 
